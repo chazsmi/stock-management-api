@@ -1,4 +1,4 @@
-# Product Streaming API
+# Stock Streaming API
 
 An exmaple streaming API that montors RabbitMQ for changes in stock levels and then exposed a websocket endpoint for clients.
 This service is an example service in the following scenero
@@ -20,4 +20,5 @@ This service is an example service in the following scenero
 ``` Go
  go run main.go 
 ```
-:8080/stock is then exposed for websockets
+:8080/stock will listen for all updates
+:8080/stock?sku=12345 listen for stock uodates for sku 12345
