@@ -1,6 +1,6 @@
 # Stock Streaming API
 
-An exmaple streaming API that montors RabbitMQ for changes in stock levels and then exposed a websocket endpoint for clients.
+An example streaming API that montors RabbitMQ for changes in stock levels and then exposes a websocket endpoint for clients.
 This service is an example service in the following scenero
 <p align="center">
   <img src="stock.png" />

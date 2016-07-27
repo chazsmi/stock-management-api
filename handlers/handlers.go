@@ -31,6 +31,7 @@ func (c Events) Stock(ws *websocket.Conn) {
 
 	c.EventsHandler.RegisterEvent(conn)
 
+	// Block until we get signal to close the connection
 	for {
 		select {
 		case <-conn.Done:
