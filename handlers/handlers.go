@@ -12,7 +12,7 @@ import (
 )
 
 type Events struct {
-	EventRec      chan events.Event
+	EventReceive  chan events.Event
 	EventsHandler *events.Handler
 }
 
@@ -51,7 +51,7 @@ func (c Events) Sub() {
 			return err
 		}
 		// Construct an events struct and send to the chnannel
-		c.EventRec <- events.Event{
+		c.EventReceive <- events.Event{
 			Ref: &st.Sku,
 			Data: map[string]interface{}{
 				"Sku":    st.Sku,

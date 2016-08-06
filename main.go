@@ -26,7 +26,7 @@ func main() {
 	// Start listening for stock updates
 	eventsHandler := events.NewEventHandler()
 	e := handlers.Events{
-		EventRec:      eventsHandler.EventRec,
+		EventReceive:  eventsHandler.Receive,
 		EventsHandler: eventsHandler,
 	}
 	go eventsHandler.Init()
